@@ -6,11 +6,11 @@ import java.util.Map;
 
 public class CPU implements ICPU {
     private final int[] memory;
-    private final Map<String, Integer> registers = new HashMap<>();
-    private final Map<String, Integer> flags = new HashMap<>();
+    private static final Map<String, Integer> registers = new HashMap<>();
+    private static final Map<String, Integer> flags = new HashMap<>();
     public CPU() {
         memory = new int[1024];
-        registers.put("A", Integer.valueOf(0));
+        registers.put("A", 0);
         registers.put("B", 0);
         registers.put("C", 0);
         registers.put("D", 0);
@@ -23,18 +23,18 @@ public class CPU implements ICPU {
     }
 
     @Override
-    public int getMemCell(int ind) {
+    public Integer getMemCell(Integer ind) {
         if (ind >= 0 && ind < memory.length)
             return memory[ind];
         return 0;
     }
 
     @Override
-    public int getReg(String name) {
+    public Integer getReg(String name) {
         return registers.get(name);
     }
     @Override
-    public int getFlagState(String compare) {
+    public Integer getFlagState(String compare) {
         return flags.get(compare);
     }
     @Override
