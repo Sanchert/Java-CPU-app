@@ -139,3 +139,8 @@ com.example.cpu_fx/
 ├── BCPU.java / BProgram.java # Singleton фабрики
 └── IObserver.java            # Интерфейс наблюдателя
 ```
+
+### Запуск через IDE
+1. Откройте проект в IntelliJ IDEA
+2. Дождитесь загрузки зависимостей Maven
+3. Запустите класс `CPU_Application.java`
