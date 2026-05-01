@@ -12,7 +12,7 @@
         public void start(Stage stage) throws IOException {
             FXMLLoader fxmlLoader = new FXMLLoader(CPU_Application.class.getResource("main.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            stage.setTitle("Pseudo Assembler Compiler");
+            stage.setTitle("Pseudo Assembler Executor");
             stage.setScene(scene);
             stage.show();
         }
