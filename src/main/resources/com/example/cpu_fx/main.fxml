@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: #4682B4; -fx-border-color: #1cfffd; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cpu_fx.CPUappController">
+   <right>
+      <AnchorPane prefHeight="1070.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="290.0" style="-fx-background-color: #77b9d3; -fx-background-radius: 30; -fx-border-color: #1cfffd; -fx-border-width: 10; -fx-border-radius: 10;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="99.0" layoutY="14.0" text="Registers values" textAlignment="JUSTIFY" textFill="#1cfffd" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="OCR A Extended" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="73.0" text="A:" textFill="#00fffb">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_reg_A" layoutX="128.0" layoutY="76.0" text="0">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="123.0" text="B:" textFill="#00fffb">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_reg_B" layoutX="128.0" layoutY="126.0" text="0">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="286.0" layoutY="73.0" text="C:" textFill="#00fffb">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_reg_C" layoutX="315.0" layoutY="76.0" text="0">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="286.0" layoutY="123.0" text="D:" textFill="#00fffb">
+                     <font>
+                        <Font name="OCR A Extended" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_reg_D" layoutX="315.0" layoutY="126.0" text="0">
+                     <font>
+                        <Font name="OCR A Extended" size="18.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane layoutX="6.0" layoutY="257.0" style="-fx-background-color: #77b9d3; -fx-background-radius: 30px; -fx-border-color: #1cfffd; -fx-border-width: 10; -fx-border-radius: 10;" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="240.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="125.0" layoutY="14.0" lineSpacing="1.0" text="Memory status" textAlignment="CENTER" textFill="#1cfffd" textOverrun="CLIP">
+                     <font>
+                        <Font name="OCR A Extended" size="28.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="mem_status" blendMode="COLOR_BURN" layoutX="20.0" layoutY="50.0" prefHeight="200.0" prefWidth="430.0" />
+               </children></Pane>
+            <Pane layoutX="10.0" layoutY="535.0" prefHeight="240.0" prefWidth="370.0" style="-fx-background-color: #77b9d3; -fx-background-radius: 30; -fx-border-color: #1cfffd; -fx-border-width: 10; -fx-border-radius: 10;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="99.0" layoutY="14.0" lineSpacing="1.0" text="Instructions set" textAlignment="CENTER" textFill="#1cfffd" textOverrun="CLIP">
+                     <font>
+                        <Font name="OCR A Extended" size="28.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="instruction_set" blendMode="COLOR_BURN" layoutX="20.0" layoutY="52.0" prefHeight="170.0" prefWidth="430.0" />
+               </children></Pane>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="700.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="2.0" prefHeight="200.0" prefWidth="536.0" style="-fx-background-color: #77b9d3; -fx-background-radius: 30px; -fx-border-color: #1cfffd; -fx-border-width: 10; -fx-border-radius: 10;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Button fx:id="Execute_Btn" alignment="CENTER" defaultButton="true" layoutX="30.0" layoutY="120.0" mnemonicParsing="false" onAction="#executeOne" prefHeight="46.0" prefWidth="500.0" style="-fx-background-radius: 10px;" text="Execute the current command" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="OCR A Extended" size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Reset_Btn" alignment="CENTER" defaultButton="true" layoutX="576.0" layoutY="120.0" mnemonicParsing="false" onAction="#reset_click" prefHeight="46.0" prefWidth="354.0" style="-fx-background-radius: 10px;" text="Reset" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="OCR A Extended" size="27.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Run_Btn" alignment="CENTER" defaultButton="true" layoutX="30.0" layoutY="40.0" mnemonicParsing="false" onAction="#runProg" prefHeight="46.0" prefWidth="500.0" style="-fx-background-radius: 10px;" text="Run program" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="OCR A Extended" size="27.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+            <ListView fx:id="commands" disable="true" layoutX="160.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 30px; -fx-background-color: #77b9d3; -fx-border-color: #1cfffd; -fx-border-width: 10; -fx-border-radius: 10;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="240.0" />
+            <ScrollPane layoutX="20.0" layoutY="240.0" prefHeight="446.0" prefWidth="960.0" style="-fx-background-radius: 10px;" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="240.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <content>
+                  <GridPane fx:id="allCommands" prefHeight="78.0" prefWidth="284.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="-21.0" layoutY="654.0" style="-fx-background-color: #77b9d3; -fx-background-radius: 10; -fx-border-color: #1cfffd; -fx-border-radius: 10; -fx-border-width: 10;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="680.0">
+               <children>
+                  <Button fx:id="Add_Btn" alignment="CENTER" defaultButton="true" layoutX="91.0" layoutY="11.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefWidth="354.0" style="-fx-background-radius: 10px;" text="Add command" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="OCR A Extended" size="27.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="cmdText" layoutX="430.0" layoutY="33.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

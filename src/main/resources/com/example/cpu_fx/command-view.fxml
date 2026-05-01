@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 6px; -fx-border-color: #00518f; -fx-border-radius: 5px; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button defaultButton="true" layoutX="24.799999999999997" layoutY="11.200000000000001" mnemonicParsing="false" onAction="#move_up" text="&lt;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="79.0" layoutY="8.0" mnemonicParsing="false" onAction="#move_down" text="&gt;" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="115.0" layoutY="7.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="delete" textFill="#00518f" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="OCR A Extended" size="18.0" />
+         </font>
+      </Button>
+      <Label id="3" fx:id="cmdText" alignment="CENTER" contentDisplay="CENTER" layoutX="211.0" layoutY="11.0" style="-fx-background-color: #00518f; -fx-background-radius: 10px;" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="OCR A Extended" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
